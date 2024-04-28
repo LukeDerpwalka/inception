@@ -1,0 +1,20 @@
+ docker.service - Docker Application Container Engine
+     Loaded: loaded (/lib/systemd/system/docker.service; enabled; vendor preset: enabled)
+     Active: failed (Result: exit-code) since Sun 2024-04-28 15:25:21 CEST; 34s ago
+TriggeredBy: × docker.socket
+       Docs: https://docs.docker.com
+    Process: 2293 ExecStart=/usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.so>
+   Main PID: 2293 (code=exited, status=1/FAILURE)
+        CPU: 37ms
+
+Apr 28 15:25:19 lkreuzer-VirtualBox systemd[1]: docker.service: Failed with result 'exit-code'.
+Apr 28 15:25:19 lkreuzer-VirtualBox systemd[1]: Failed to start Docker Application Container Eng>
+Apr 28 15:25:21 lkreuzer-VirtualBox systemd[1]: docker.service: Scheduled restart job, restart c>
+Apr 28 15:25:21 lkreuzer-VirtualBox systemd[1]: Stopped Docker Application Container Engine.
+Apr 28 15:25:21 lkreuzer-VirtualBox systemd[1]: docker.service: Start request repeated too quick>
+Apr 28 15:25:21 lkreuzer-VirtualBox systemd[1]: docker.service: Failed with result 'exit-code'.
+Apr 28 15:25:21 lkreuzer-VirtualBox systemd[1]: Failed to start Docker Application Container Eng>
+Apr 28 15:25:43 lkreuzer-VirtualBox systemd[1]: docker.service: Start request repeated too quick>
+Apr 28 15:25:43 lkreuzer-VirtualBox systemd[1]: docker.service: Failed with result 'exit-code'.
+Apr 28 15:25:43 lkreuzer-VirtualBox systemd[1]: Failed to start Docker Application Container Eng>
+lines 1-19/19 (END)
