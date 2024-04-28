@@ -44,4 +44,6 @@ security.limit_extensions = .php .php3 .php4 .php5 .php7"
 
 sed -i "s|.*|${config}|g" "$www_conf_file"
 
+chrown -R www-data:ww-data /var/www/html
+
 /usr/sbin/php-fpm7.4 -F
