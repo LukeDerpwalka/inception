@@ -13,11 +13,15 @@ wp config create --dbname="${DB_DATABASE}" \
                     --skip-check \
                     --allow-root
 wp core install --allow-root \
-        --url="lkreuzer.42.fr" \
+        --url="https://lkreuzer.42.fr" \
         --title="Inception" \
         --admin_user="${WP_ADMIN_USR}" \
         --admin_password="${WP_ADMIN_PWD}" \
         --admin_email="${WP_ADMIN_EMAIL}"
+
+wp option update home "https://lkreuzer.42.fr" --allow-root
+wp option update siteurl "https://lkreuzer.42.fr" --alllow-root
+
 wp user create "${WP_USER_NAME}" \
                     "${WP_USER_EMAIL}" \
                     --user_pass="$WP_USER_PASSWORD" \
@@ -44,6 +48,6 @@ security.limit_extensions = .php .php3 .php4 .php5 .php7"
 
 sed -i "s|.*|${config}|g" "$www_conf_file"
 
-chown -R www-data:ww-data /var/www/html
+chown -R www-data:www-data /var/www/html
 
 /usr/sbin/php-fpm7.4 -F

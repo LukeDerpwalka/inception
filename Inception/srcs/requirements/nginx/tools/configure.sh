@@ -1,6 +1,14 @@
 #!/bin/sh
 
-echo "server {\
+echo "
+
+server {
+    listen 80;
+    server_name lkreuzer.42.fr;
+    return 301 https://$host$reuqest_uri;
+}
+
+server {\
     listen 443 ssl http2;\
     server_name lkreuzer.42.fr;\
     root /var/www/html;\
